@@ -1,0 +1,27 @@
+h1 {
+    text-align:center;
+    color:red;
+}
+.contnt{
+    margin-left: 300px;
+    margin-right: 300px;
+    font-family: sans-serif;
+    font-size: 40px;
+    padding: 20px;
+}
+.clr{
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    width:1536px;
+    height: 728px;
+    background-attachment: fixed;
+    background-size: cover;
+    
+}
+body{
+    background-image: url("12.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+      
+}         

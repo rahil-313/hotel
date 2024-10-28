@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="projectform.css">
+    <link rel="stylesheet" type="text/css" href="project.css">
+    <title></title>
+    <script>
+        msg=""
+        function validate()
+        {
+            valid=1
+            document.getElementById("t1err").innerHTML=""
+            document.getElementById("t2err").innerHTML=""
+            document.getElementById("t3err").innerHTML=""
+            document.getElementById("t4err").innerHTML=""
+            document.getElementById("t5err").innerHTML=""
+            document.getElementById("t6err").innerHTML=""
+            document.getElementById("t7err").innerHTML=""
+           
+            
+            r=new RegExp()
+            r=/^[A-Z][a-z]*$/
+            if(!r.test(document.f1.t1.value))
+            {
+                document.getElementById("t1err").innerHTML="* First name error...."
+                valid=0
+            }
+            if(!r.test(document.f1.t2.value))
+            {
+                document.getElementById("t2err").innerHTML="* Last name error...."
+                valid=0
+            }
+            if(document.f1.t3.value=="")
+            {
+                document.getElementById("t3err").innerHTML="* Email is blank...."
+                valid=0
+            }
+            r=/^\d{10}$/
+            if(!r.test(document.f1.t4.value))
+            {
+                document.getElementById("t4err").innerHTML="* Phone number is blank...."
+                valid=0
+            }
+            if(document.f1.t5.value=="")
+            {
+                document.getElementById("t5err").innerHTML="* Date is blank...."
+                valid=0
+            }
+            if(document.f1.t6.value=="")
+            {
+                document.getElementById("t6err").innerHTML="* Date is blank...."
+                valid=0
+            }
+            if(document.f1.t7.value=="")
+            {
+                document.getElementById("t7err").innerHTML="* guest number is blank...."
+                valid=0
+            }
+           
+            if(valid==1)
+            {
+                a=document.f1.t1.value
+                b=document.f1.t2.value
+                c=document.f1.t3.value
+                d=document.f1.t4.value
+                e=document.f1.t5.value
+                f=document.f1.t6.value
+                g=document.f1.t7.value
+                document.write("<br><img src='preview.jpg' style='width:1500px;height:900px;'>")
+            }
+        }
+    </script>
+   
+</head>
+<body>
+    <div class="clr">
+    <header>
+        <div class="content flex_space">
+            <div class="logo">
+                <img src="icons8-hotel-64.png" alt=""  >
+                </div>
+                <div class="navlinks">
+                    <ul id="manulist">
+                        <li><a href="project.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="help.html">Help</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="support.html">Support</a></li>
+                       
+                    </ul>
+                </div>
+            </div>
+    </header>
+    <h1>REGISTRATION FORM</h1> 
+<div class="contnt">
+    <form name="f1" method="post">
+        <table>
+            <tr>
+        <td><label for="firstname">First Name</label></td>
+        <td><input type="text" name="t1"></td>
+        <td><span style="color:red;font-size: 10px;" id="t1err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="lastname">Last Name</label></td>
+        <td><input type="text" name="t2"></td>
+        <td><span style="color:red;font-size: 10px;" id="t2err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="Email id">Email Id</label></td>
+        <td><input type="email" name="t3"></td>
+        <td><span style="color:red;font-size: 10px;" id="t3err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="phonenumber">Phone Number</label></td>
+        <td><input type="number" name="t4"></td>
+        <td><span style="color:red;font-size: 10px;" id="t4err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="Date">Arraival Date</label></td>
+        <td><input type="date" name="t5"></td>
+        <td><span style="color:red;font-size: 10px;" id="t5err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="Date">Departure Date</label></td>
+        <td><input type="date" name="t6"></td>
+        <td><span style="color:red;font-size: 10px;" id="t6err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="number of guests">Number of guests</label></td>
+        <td><input type="number" name="t7"></td>
+            <td><span style="color:red;font-size: 10px;" id="t7err"></span></td>
+    </tr>
+    <tr>
+        <td><label for="Roomstype">Rooms type</label></td>
+        <td><select name="t8">
+            <option value="Ac">Ac</option>
+            <option value="Non Ac">Non Ac</option>
+            <option value="Single Bed">Single Bed</option>
+            <option value="Double Bed">Double Bed</option>
+            <option value="Four Bed">Four Bed</option>
+        </select></td>
+        </tr>
+<tr>
+        <td><input type="button" name="b1" value="submit" onclick="validate()" style="margin-left: 400px;margin-top: 100px;width: 200px;height: 50px;background: red;color:white;font-size: 20px;"></td>
+        <td></td>
+    </tr>
+
+    </table>
+        
+
+
+
+    </form>
+    </div>
+
+
+</body>
+</html>
